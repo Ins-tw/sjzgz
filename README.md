@@ -1,1 +1,61 @@
-# sjzgz
+[RoutingRule]
+DOMAIN,m.baidu.com,PROXY
+DOMAIN,www.baidu.com,PROXY
+DOMAIN-KEYWORD,lua,DIRECT
+DOMAIN-KEYWORD,lknb666,DIRECT
+DOMAIN-KEYWORD,nb08,DIRECT
+DOMAIN-KEYWORD,qlogo,DIRECT
+DOMAIN,down.qq.com,DIRECT
+IP-CIDR,101.226.101.163/32,DIRECT
+DOMAIN-KEYWORD,superbed,DIRECT
+DOMAIN-KEYWORD,imgdb,DIRECT
+DOMAIN-KEYWORD,gitee,DIRECT
+DOMAIN-KEYWORD,image,DIRECT
+DOMAIN-KEYWORD,t3,DIRECT
+DOMAIN-KEYWORD,t3data,DIRECT
+DOMAIN-KEYWORD,840fk,DIRECT
+DOMAIN-KEYWORD,luoyew,DIRECT
+DOMAIN-KEYWORD,open,DIRECT
+DOMAIN-KEYWORD,xui,DIRECT
+DOMAIN-KEYWORD,aegis,DIRECT
+DOMAIN-KEYWORD,imgcache,DIRECT
+DOMAIN-KEYWORD,qlogo,PROXY
+DOMAIN-KEYWORD,jiazhang,DIRECT
+DOMAIN,nj.cschannel.anticheatexpert.com,PROXY
+DOMAIN-KEYWORD,ssl.msdk,DIRECT
+PORT,10012,PROXY
+PORT,65010,PROXY
+PORT,443,DIRECT
+FINAL, DIRECT
+
+[RoutingDomainStrategy]
+AsIs
+
+[FreedomDomainStrategy]
+AsIs
+
+[LocalPolicy]
+bufferSize = 4096
+connIdle = 300
+downlinkOnly = 0
+handshake = 4
+uplinkOnly = 0
+
+[DnsServer]
+
+[DnsRule]
+
+[DnsHost]
+
+[DnsClientIp]
+
+[Log]
+loglevel = none
+
+[PerAppVpn]
+
+[PerAppMode]
+
+[PerAppAllow]
+
+[PerAppDisallow]
