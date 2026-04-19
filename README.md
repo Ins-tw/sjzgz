@@ -1,47 +1,44 @@
-[RoutingRule]
-DOMAIN,m.baidu.com,PROXY
-DOMAIN,www.baidu.com,PROXY
-DOMAIN-KEYWORD,lua,DIRECT
-DOMAIN-KEYWORD,lknb666,DIRECT
-DOMAIN-KEYWORD,nb08,DIRECT
-DOMAIN-KEYWORD,qlogo,DIRECT
-DOMAIN,down.qq.com,DIRECT
-IP-CIDR,101.226.101.163/32,DIRECT
-DOMAIN-KEYWORD,superbed,DIRECT
-DOMAIN-KEYWORD,imgdb,DIRECT
-DOMAIN-KEYWORD,gitee,DIRECT
-DOMAIN-KEYWORD,image,DIRECT
-DOMAIN-KEYWORD,t3,DIRECT
-DOMAIN-KEYWORD,t3data,DIRECT
-DOMAIN-KEYWORD,840fk,DIRECT
-DOMAIN-KEYWORD,luoyew,DIRECT
-DOMAIN-KEYWORD,open,DIRECT
-DOMAIN-KEYWORD,xui,DIRECT
-DOMAIN-KEYWORD,aegis,DIRECT
-DOMAIN-KEYWORD,imgcache,DIRECT
-DOMAIN-KEYWORD,qlogo,PROXY
-DOMAIN-KEYWORD,jiazhang,DIRECT
-DOMAIN,nj.cschannel.anticheatexpert.com,PROXY
-DOMAIN-KEYWORD,ssl.msdk,DIRECT
-PORT,10012,PROXY
+[惯例]
+#验证
+DOMAIN-KEYWORD,baidu,PROXY
+#联网端口
 PORT,65010,PROXY
-PORT,443,DIRECT
-FINAL, DIRECT
+PORT,10012,PROXY
+#放行端口
+DOMAIN-KEYWORD,com,DIRECT
+DOMAIN-KEYWORD,xin,DIRECT
+DOMAIN-KEYWORD,cn,DIRECT
+DOMAIN-KEYWORD,net,DIRECT
+# IP处理
+IP-CIDR，43.154.240.179/32，直达
+IP-CIDR，43.154.240.99/32，直达
+IP-CIDR，61.151.229.52/32，直达
+IP-CIDR，101.89.42.96/32，直达
+IP-CIDR，117.131.23.224/32，直达
+IP-CIDR，183.194.238.78/32，直接
+IP-CIDR，116.128.169.246/32，直达
+IP-CIDR，116.128.169.179/32，直达
+#拒代端口
+PORT,443,REJECT
+FINAL,DIRECT
 
-[RoutingDomainStrategy]
-AsIs
+[路由域策略]
+AsIs 似乎不是一个完整的句子或有明确意义
 
-[FreedomDomainStrategy]
-AsIs
+[自由战略]
+AsIs 似乎不是一个完整的句子或有明确意义
 
-[LocalPolicy]
+[地方政策]
 bufferSize = 4096
 connIdle = 300
 downlinkOnly = 0
-handshake = 4
+握手=4
 uplinkOnly = 0
 
 [DnsServer]
+8.8.8.8
+114.114.114.114
+119.29.29.29
 
 [DnsRule]
 
@@ -49,7 +46,7 @@ uplinkOnly = 0
 
 [DnsClientIp]
 
-[Log]
+[日志]
 loglevel = none
 
 [PerAppVpn]
@@ -58,4 +55,4 @@ loglevel = none
 
 [PerAppAllow]
 
-[PerAppDisallow]
+[允许]
